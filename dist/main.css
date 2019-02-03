@@ -3,275 +3,362 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* -----------------------------------------------*/
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 10px 10%;
-    background-color: rgb(254, 255, 234);
+  margin: 10px 10%;
+  background-color: rgb(254, 255, 234);
 }
 
 #container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'slabo 27px', 'serif';
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'slabo 27px', 'serif';
 }
 
 header {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 1%;
-    background-color: rgb(135, 157, 191);
-    color: white;
-    min-height: 100px;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1%;
+  background-color: rgb(135, 157, 191);
+  color: white;
+  min-height: 100px;
+  width: 100%;
 }
 
 header h1 {
-    font-size: 200%;
-    padding: 8px;
+  font-size: 200%;
+  padding: 8px;
 }
 
-header #project-selector:hover, header #toggle-form-button:hover {
-    cursor: pointer;
+header #project-selector:hover,
+header #toggle-form-button:hover {
+  cursor: pointer;
 }
 
-header #toggle-form-button, header #project-selector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid;
-    border-width: 1px;
-    border-radius: 8%;
-    width: 235px;
-    height: 40px;
-    padding: 5px;
+header #toggle-form-button,
+header #project-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-width: 1px;
+  border-radius: 8%;
+  width: 235px;
+  height: 40px;
+  padding: 5px;
 }
 
 header #project-selector-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #projects {
-    display: none;
-    position: fixed;
-    margin-top: 50px;
-    border: solid;
-    border-width: 1px;
-    background-color: rgba(135, 157, 191, .92);
-    border-color: white;
-    width: 245px;
-    flex-direction: column;
-    align-items: center;
+  display: none;
+  position: fixed;
+  margin-top: 50px;
+  border: solid;
+  border-width: 1px;
+  background-color: rgba(135, 157, 191, 0.92);
+  border-color: white;
+  width: 245px;
+  flex-direction: column;
+  align-items: center;
 }
 
 #projects > * {
-    margin: 5px;
-    width: 100%;
+  margin: 5px;
+  width: 100%;
 }
 
 .project {
-    text-align: center;
+  text-align: center;
 }
 
 .project:hover {
-    background-color: rgba(120, 157, 191, .92);
-    cursor: pointer;
+  background-color: rgba(120, 157, 191, 0.92);
+  cursor: pointer;
 }
 
 .delete-project {
-    position: absolute;
-    right: 5px;
+  position: absolute;
+  right: 5px;
 }
 
 .delete-project:hover {
-    color:red;
+  color: red;
 }
 
 #new-project-input {
-    width: 65%;
-    margin: auto 10px;
+  width: 65%;
+  margin: auto 10px;
 }
 
 #content {
-    flex: 8;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    background-color: rgb(254, 255, 234);
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-color: rgb(254, 255, 234);
 }
 
 .item {
-    flex: none;
-    min-height: 70px;
-    background-color: rgba(225, 227, 237, .8);
-    border: solid;
-    border-width: 2px 1px;
-    border-color: black;
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  flex: none;
+  min-height: 70px;
+  background-color: rgba(225, 227, 237, 0.8);
+  border: solid;
+  border-width: 2px 1px;
+  border-color: black;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .item:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .preview {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 
 .todo-options {
-    width: 10%;
-    display: flex;
-    justify-content: space-between;
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .todo-options > button {
-    width: 80px;
-    height: 30px;
+  width: 80px;
+  height: 30px;
 }
 
-#todo-form, #edit-form {
-    position: fixed;
-    width: 500px;
-    min-height: 300px;
-    left: calc(50% - 290px);
-    height: 40%;
-    top: 20%;
-    background-color: white;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 40px;
-    border-radius: 10%;
-    border: solid;
-    display: none;
+#todo-form,
+#edit-form {
+  position: fixed;
+  width: 500px;
+  min-height: 300px;
+  left: calc(50% - 290px);
+  height: 40%;
+  top: 20%;
+  background-color: white;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 10%;
+  border: solid;
+  display: none;
 }
 
 .input-container {
-    display: flex;
+  display: flex;
 }
 
-.input-container > input, .input-container > select, .input-container > textarea {
-    width: 60%;
+.input-container > input,
+.input-container > select,
+.input-container > textarea {
+  width: 60%;
 }
 
 .labels {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 30%;
-    margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30%;
+  margin-right: 15px;
 }
 
 .form-buttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-#todo-form > *, #edit-form > * {
-    min-width: 500px;
+#todo-form > *,
+#edit-form > * {
+  min-width: 500px;
 }
 
-#todo-form h1, #edit-form h1 {
-    font-size: 150%;
-    text-align: center;
+#todo-form h1,
+#edit-form h1 {
+  font-size: 150%;
+  text-align: center;
 }
 
-#create-todo-button, #edit-todo-button {
-    height: 30px;
-    width: 200px;
-    margin-right: 5px;
+#create-todo-button,
+#edit-todo-button {
+  height: 30px;
+  width: 200px;
+  margin-right: 5px;
 }
 
 .details {
-    display: none;
-    margin-top: 0;
-    border: none;
-    border-bottom: solid;
-    border-width: 1px;
-    flex-direction: column;
-    background-color: white;
-   font-size: 90%;
+  display: none;
+  margin-top: 0;
+  border: none;
+  border-bottom: solid;
+  border-width: 1px;
+  flex-direction: column;
+  background-color: white;
+  font-size: 90%;
 }
 
 .details:hover {
-   cursor: default; 
+  cursor: default;
 }
 
 .details * {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .delete-todo-button {
-    color: red;
+  color: red;
 }
 
 .details-1 {
-    width: 100%;
-   display: flex; 
-   justify-content: space-around;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .edit {
-    width: 70px;
-    height: 30px;
+  width: 70px;
+  height: 30px;
 }
 
 #clearLocalStorage {
-   margin-top: 100px; 
-   text-align: center;
-   margin-left: 100%;
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 100%;
 }

@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Todo List</title>
-        <link href='./main.css' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-    </head>
-    <body>
-        <div id='container'>
-            <header>
-                <div id='project-selector-container'>
-                    <div id='project-selector'>
-                    </div>
-                    <div id='projects'>
-                        <span id='project-form'>
-                            <input id='new-project-input' type='text' placeholder='Add new project' maxlength='15'></input>
-                            <button id='new-project-button'>Add</button>
-                        </span>
-                    </div>
-                </div>
-                <h1>TO&#8226;DO</h1>
-                <p id='toggle-form-button'>+add task</p>
-            </header>
-
-            <div id='edit-form'>
-                <h1>Edit To-do</h1>  
-                <span class='input-container'>
-                    <label for='title' class='labels'>Title</label>     
-                    <input id='edit-title-input' type='text'>
-                </span>
-                <span class='input-container'>
-                    <label for='description' class='labels'>Description</label>
-                    <textarea id='edit-description-input' rows="4" cols='38'></textarea>
-                </span>
-                <span class='input-container'>
-                    <label for='due-date' class='labels'>Due Date</label>
-                    <input id='edit-due-date-input' type='date'>
-                </span>
-                <span class='input-container'>
-                    <label for='priority' class='labels'>Priority</label>
-                    <select id='edit-priority-input'>
-                        <option selected='selected' value='low'>Low</option>
-                        <option value='medium'>Medium</option> 
-                        <option value='high'>High</option> 
-                    </select>  
-                </span>
-                <span class='form-buttons'>
-                    <button id='edit-todo-button' type='submit'>Save Changes</button>
-                    <button id='cancel-edit-button' type='submit'>Cancel</button>
-                </span>
-            </div>
-
-            <div id='todo-form'>
-                <h1>New To-do</h1>  
-                <span class='input-container'>
-                    <label for='title' class='labels'>Title</label>     
-                    <input id='title-input' type='text'>
-                </span>
-                <span class='input-container'>
-                    <label for='description' class='labels'>Description</label>
-                    <textarea id='description-input' rows="4" cols='38'></textarea>
-                </span>
-                <span class='input-container'>
-                    <label for='due-date' class='labels'>Due Date</label>
-                    <input id='due-date-input' type='date'>
-                </span>
-                <span class='input-container'>
-                    <label for='priority' class='labels'>Priority</label>
-                    <select id='priority-input'>
-                        <option selected='selected' value='low'>Low</option>
-                        <option value='medium'>Medium</option> 
-                        <option value='high'>High</option> 
-                    </select>  
-                </span>
-                <span class='form-buttons'>
-                    <button id='create-todo-button' type='submit'>Add To-do</button>
-                    <button id='cancel-todo-button' type='submit'>Cancel</button>
-                </span>
-            </div>
-
-            <div id='content'>
-            </div>
+  <head>
+    <title>Todo List</title>
+    <link href="./main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div id="project-selector-container">
+          <div id="project-selector"></div>
+          <div id="projects">
+            <span id="project-form">
+              <input
+                id="new-project-input"
+                type="text"
+                placeholder="Add new project"
+                maxlength="15"
+              />
+              <button id="new-project-button">Add</button>
+            </span>
+          </div>
         </div>
-        <!--  <button id='clearLocalStorage'>Clear Saved Projects</button> --!>
-        <script src="main.js"></script>
-    </body>
+        <h1>TO&#8226;DO</h1>
+        <p id="toggle-form-button">+add task</p>
+      </header>
+
+      <div id="edit-form">
+        <h1>Edit To-do</h1>
+        <span class="input-container">
+          <label for="title" class="labels">Title</label>
+          <input id="edit-title-input" type="text" />
+        </span>
+        <span class="input-container">
+          <label for="description" class="labels">Description</label>
+          <textarea id="edit-description-input" rows="4" cols="38"></textarea>
+        </span>
+        <span class="input-container">
+          <label for="due-date" class="labels">Due Date</label>
+          <input id="edit-due-date-input" type="date" />
+        </span>
+        <span class="input-container">
+          <label for="priority" class="labels">Priority</label>
+          <select id="edit-priority-input">
+            <option selected="selected" value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </span>
+        <span class="form-buttons">
+          <button id="edit-todo-button" type="submit">Save Changes</button>
+          <button id="cancel-edit-button" type="submit">Cancel</button>
+        </span>
+      </div>
+
+      <div id="todo-form">
+        <h1>New To-do</h1>
+        <span class="input-container">
+          <label for="title" class="labels">Title</label>
+          <input id="title-input" type="text" />
+        </span>
+        <span class="input-container">
+          <label for="description" class="labels">Description</label>
+          <textarea id="description-input" rows="4" cols="38"></textarea>
+        </span>
+        <span class="input-container">
+          <label for="due-date" class="labels">Due Date</label>
+          <input id="due-date-input" type="date" />
+        </span>
+        <span class="input-container">
+          <label for="priority" class="labels">Priority</label>
+          <select id="priority-input">
+            <option selected="selected" value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </span>
+        <span class="form-buttons">
+          <button id="create-todo-button" type="submit">Add To-do</button>
+          <button id="cancel-todo-button" type="submit">Cancel</button>
+        </span>
+      </div>
+
+      <div id="content"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -1,6 +1,5 @@
 import displayController from './displayController';
 import eventController from './eventController';
-'use strict';
+('use strict');
 
 eventController.init();
-

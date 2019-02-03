@@ -1,11 +1,9 @@
-
 'use strict';
 
 const todo = (id, title, description, dueDate, priority) => {
+  title = title === '' ? 'Untitled Task' : title;
 
-	title = title === '' ? 'Untitled Task' : title;
-
-	return {id, title, description, dueDate, priority};
+  return {id, title, description, dueDate, priority};
 };
 
 export default todo;
